@@ -1,0 +1,47 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+		"plugin:prettier/recommended",
+		"plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+	"plugins": ["prettier","react", "@typescript-eslint", "react-hooks", "import"],
+  "rules": {
+    "linebreak-style": ["warn", "unix"],
+    "quotes": ["warn", "single"],
+    "semi": ["warn", "always"],
+    "react/jsx-filename-extension": [
+      2,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["warn"],
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "warn",
+    "no-multi-spaces": ["warn", { "ignoreEOLComments": false }],
+    "no-console": ["warn", { "allow": ["warn", "error", "info"] }],
+    "comma-dangle": "off",
+    "@typescript-eslint/comma-dangle": "off",
+    "react/react-in-jsx-scope": "off",
+    "no-mixed-spaces-and-tabs": "warn",
+		"@typescript-eslint/no-unused-vars": [
+			"warn",
+			{
+				"vars": "all",
+				"args": "none"
+			}
+		]
+	}
+}
